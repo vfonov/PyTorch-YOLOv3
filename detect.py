@@ -60,6 +60,7 @@ print ('\nPerforming object detection:')
 prev_time = time.time()
 for batch_i, (img_paths, input_imgs) in enumerate(dataloader):
     # Configure input
+    print(input_imgs.size(),min(input_imgs),max(input_imgs))
     input_imgs = Variable(input_imgs.type(Tensor))
 
     # Get detections
